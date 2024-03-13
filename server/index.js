@@ -25,10 +25,12 @@ app.use(express.json())
 app.use(bodyParser.json({extended: true}))
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.use(cors({
-    origin:["http://localhost:5173"],
-}));
+app.use(cors());
 app.use('/', Router);
+
+app.use('/', (req, res) => {
+    res.status(200).json({message: 'Welcome to my api'})
+})
 
 app.use('*', (req, res) => {
     res.status(500).json({msg: 'Route not found'})
