@@ -1,9 +1,9 @@
-
 import { Box, styled, Typography, Link } from '@mui/material';
 import { GitHub, Instagram, Email } from '@mui/icons-material';
+import imaBanner from '../../assets/bg2.jpg';
 
 const Banner = styled(Box)`
-    background-image: url(http://mrtaba.ir/image/bg2.jpg);
+    background-image: url(${imaBanner});
     width: 100%;
     height: 50vh;
     background-position: left 0px top -100px;
@@ -20,7 +20,6 @@ const Wrapper = styled(Box)`
 const Text = styled(Typography)`
     color: #878787;
 `;
-
 
 const Contact = () => {
     return (
